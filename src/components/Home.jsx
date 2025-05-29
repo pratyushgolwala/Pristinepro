@@ -17,13 +17,11 @@ export default function Home() {
     },
     {
       image: "/pictures/jasmine2.png",
-      link: "https://google.com/",
       title: "Item 3",
       description: "This is pretty cool, right?",
     },
     {
       image: "/pctures/ice2.png",
-      link: "https://google.com/",
       title: "Item 4",
       description: "This is pretty cool, right?",
     },

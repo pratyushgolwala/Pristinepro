@@ -16,7 +16,6 @@ export default function Navbar() {
     { icon: <FiHome />, color: "blue", label: "Home" },
     { icon: <FiInfo />, color: "purple", label: "About" },
     { icon: <FiCoffee />, color: "red", label: "Flavours" },
-    { icon: <FiStar />, color: "indigo", label: "Reviews" },
     { icon: <FiMail />, color: "orange", label: "Contact" },
   ];
 
