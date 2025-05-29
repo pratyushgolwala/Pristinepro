@@ -1,50 +1,106 @@
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: transparent;
+  color: white;
+}
 
+.nav-content {
+  display: flex;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  width: 100%;
+  position: relative;
+  gap: 16rem;
+}
 
+.logo-img {
+  height: 68px;
+  background-color: transparent;
+  display: block;
+  margin-right: 2rem;
+  margin-left: -6rem;
+  margin-top: -0.5rem;
+}
+
+.icon-list {
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  align-items: center;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.icon-blue { color: #3b82f6; }
+.icon-purple { color: #9333ea; }
+.icon-red { color: #ef4444; }
+.icon-indigo { color: #6366f1; }
+.icon-orange { color: #f97316; }
+.icon-green { color: #22c55e; }
+
+.nav-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  .nav-content {
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+  .logo-img {
+    height: 40px;
+    margin-right: 1rem;
+  }
+  .icon-list {
+    display: none;
+  }
+  .nav-hamburger {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+/* Mobile menu styles */
+@media (max-width: 900px) {
+  .icon-list.nav-menu {
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    background: transparent;
     top: 0;
     left: 0;
-    right: 0;
-    z-index: 1000;
-    color: white;
+    height: 100vh;
+    width: 220px;
+    background: #18181b;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 4px 0 24px rgba(0,0,0,0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1);
+    z-index: 1001;
   }
-
-.brand{
-    font-size: x-large;
+  .icon-list.nav-menu.open {
+    transform: translateX(0);
+  }
 }
-  
-  .nav-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    max-width: 1280px;
-    margin: 0 auto;
-  }
-  
-  .icon-list {
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  
-  .icon-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-  }
-  
-  .icon-blue { color: #3b82f6; }
-  .icon-purple { color: #9333ea; }
-  .icon-red { color: #ef4444; }
-  .icon-indigo { color: #6366f1; }
-  .icon-orange { color: #f97316; }
-  .icon-green { color: #22c55e; }
-
 
 
 

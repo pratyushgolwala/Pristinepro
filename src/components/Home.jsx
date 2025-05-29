@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <>
       <div className="home-container">
-        <div className="home-left">
+        <div className="home-left my-3">
           <h1>
           Welcome to PrestinePro!
           </h1>
