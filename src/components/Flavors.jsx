@@ -3,10 +3,12 @@ import FlowingMenu from './FlowingMenu';
 
 export default function Flavors() {
     const demoItems = [
-        { link: '#', text: 'Mojave', image: 'https://picsum.photos/600/400?random=1' },
-        { link: '#', text: 'Sonoma', image: 'https://picsum.photos/600/400?random=2' },
-        { link: '#', text: 'Monterey', image: 'https://picsum.photos/600/400?random=3' },
-        { link: '#', text: 'Sequoia', image: 'https://picsum.photos/600/400?random=4' }
+        { text: 'Orange', image: '/pictures/orange.jpg' },
+        { text: 'Jasmine', image: '/pictures/jasmine.jpg' },
+        { text: 'Ice Fresh', image: '/pictures/ice.jpg' },
+        { text: 'coffee', image: '/pictures/coffee.jpg' },
+        { text: 'Makeup Remover', image: '/pictures/makeup.jpg' },
+        { text: 'Baby wipes', image: '/pictures/baby.png' }
     ];
 
     return (

@@ -15,7 +15,7 @@
   padding: 1rem 2rem;
   width: 100%;
   position: relative;
-  gap: 16rem;
+  gap: 22rem;
 }
 
 .logo-img {
@@ -23,8 +23,9 @@
   background-color: transparent;
   display: block;
   margin-right: 2rem;
-  margin-left: -6rem;
+  margin-left: -4rem;
   margin-top: -0.5rem;
+  position: fixed;
 }
 
 .icon-list {
@@ -63,18 +64,20 @@
 @media (max-width: 900px) {
   .nav-content {
     padding: 1rem;
-    justify-content: flex-start;
+    justify-content: end;
+
   }
   .logo-img {
     height: 40px;
     margin-right: 1rem;
+    margin-left: -6rem;
   }
   .icon-list {
     display: none;
   }
   .nav-hamburger {
-    display: block;
-    margin-left: auto;
+    display: flex;
+    align-items: flex-end;
   }
 }
 

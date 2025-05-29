@@ -50,7 +50,6 @@ export default function About() {
     const [hovered, setHovered] = useState(null);
     const [paused, setPaused] = useState(false);
 
-
     const handleHover = (idx) => {
         setHovered(idx);
         setPaused(true);
@@ -65,6 +64,7 @@ export default function About() {
         <div style={{ display: "flex", flexDirection: "column", gap: "80px" }}>
             {/* Top Section: Bubbles + Info Card */}
             <div
+                className="about-top-section"
                 style={{
                     display: "flex",
                     flexDirection: "row",
@@ -76,10 +76,11 @@ export default function About() {
                     marginTop: 70,
                     position: "relative",
                     zIndex: 2,
+                    flexWrap: "wrap",
                 }}
             >
                 {/* Left: Feature Bubbles */}
-                <div style={{ display: "flex", gap: "2.5rem", marginTop: 30 }}>
+                <div className="about-bubbles" style={{ display: "flex", gap: "2.5rem", marginTop: 30, flexWrap: "wrap", justifyContent: "center" }}>
                     {features.map((feature, i) => {
                         const expandedWidth = (hovered === i && (i === 1 || i === 2)) ? 290 : (hovered === i ? 220 : 70);
                         return (
@@ -111,6 +112,7 @@ export default function About() {
                                     position: "relative",
                                     overflow: "visible",
                                     zIndex: hovered === i ? 2 : 1,
+                                    marginBottom: "16px",
                                 }}
                             >
                                 <AnimatePresence mode="wait" initial={false}>
@@ -173,6 +175,7 @@ export default function About() {
 
                 {/* Right: Info Card */}
                 <div
+                    className="about-info-card"
                     style={{
                         minWidth: 270,
                         maxWidth: 420,
@@ -188,6 +191,8 @@ export default function About() {
                         WebkitBackdropFilter: 'blur(12px)',
                         border: '1.5px solid rgba(162,89,247,0.18)',
                         marginTop: 30,
+                        width: "100%",
+
                     }}
                 >
                     <h2
@@ -318,9 +323,8 @@ export default function About() {
                             transition={{ duration: 0.5, delay: index * 0.2 }}
                             style={{
                                 background: 'rgba(255,255,255,0.18)',
-
-                                backdropFilter: "blur(12px)", // Added blur effect
-                                WebkitBackdropFilter: "blur(12px)", // Safari support
+                                backdropFilter: "blur(12px)",
+                                WebkitBackdropFilter: "blur(12px)",
                                 borderRadius: "16px",
                                 padding: "24px",
                                 border: "1px solid rgba(162,89,247,0.1)",
@@ -329,7 +333,7 @@ export default function About() {
                             }}
                               whileHover={{ 
                                 y: -8,
-                                background: 'rgba(255,255,255,0.22)', // Slightly darker on hover
+                                background: 'rgba(255,255,255,0.22)',
                                 transition: { duration: 0.2 }
                               }}
                         >
@@ -355,14 +359,33 @@ export default function About() {
                         </motion.div>
                     ))}
                 </div>
-
             </div>
             <ScrollVelocity
-      style={{ position: "absolute", top: 0, left: 0, width: "20px", height: "20vh", color: "#fff" }}
-        texts={["PrestinePro", "Best Quality Wet Tissues!"]}
-        velocity={velocity}
-        className="custom-scroll-text"
-      />
+                style={{ position: "absolute", top: 0, left: 0, width: "20px", height: "20vh", color: "#fff" }}
+                texts={["PrestinePro", "Best Quality Wet Tissues!"]}
+                velocity={velocity}
+                className="custom-scroll-text"
+            />
+            <style>{`
+                @media (max-width: 900px) {
+                    .about-top-section {
+                        flex-direction: column !important;
+                        gap: 24px !important;
+                        align-items: stretch !important;
+                    }
+                    .about-bubbles {
+                        justify-content: center !important;
+                        flex-wrap: wrap !important;
+                        gap: 1.5rem !important;
+                        margin-top: 0 !important;
+                    }
+                    .about-info-card {
+                        margin-top: 0 !important;
+                        width: 100% !important;
+                        max-width: 100% !important;
+                    }
+                }
+            `}</style>
         </div>
     );
 }
