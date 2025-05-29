@@ -15,7 +15,7 @@
   padding: 1rem 2rem;
   width: 100%;
   position: relative;
-  gap: 22rem;
+  gap: 27rem;
 }
 
 .logo-img {
@@ -69,8 +69,7 @@
   }
   .logo-img {
     height: 40px;
-    display: flex;
-    align-items: flex-start;
+    margin-left: 3rem;
   }
   .icon-list {
     display: none;
