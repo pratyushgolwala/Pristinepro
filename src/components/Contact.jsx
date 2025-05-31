@@ -11,9 +11,9 @@ const FLAVORS = [
 ];
 
 // Replace these with your actual EmailJS values
-const SERVICE_ID = "service_e2c7ann";
-const TEMPLATE_ID = "template_5vytfca";
-const PUBLIC_KEY = "cI0yMUr1UCv_vdMo9";
+const SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const [form, setForm] = useState({
