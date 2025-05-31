@@ -4,6 +4,7 @@ import Particles from './components/Particles';
 import Home from './components/Home';
 import About from './components/About';
 import Flavors from './components/Flavors';
+import Contact from './components/Contact';
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
       <Home />
       <About />
       <Flavors/>
+      <Contact/>
     </div>
   );
 }

@@ -3,7 +3,6 @@ import {
   FiHome,
   FiInfo,
   FiCoffee,
-  FiStar,
   FiMail,
   FiMenu,
   FiX,

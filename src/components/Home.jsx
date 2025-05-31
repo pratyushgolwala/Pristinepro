@@ -1,31 +1,10 @@
 import React from "react";
-import InfiniteMenu from "./InfiniteMenu";
+import CircularGallery from "./CircularGallery";
 import ScrollVelocity from "./ScrollVelocity";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
-  const items = [
-    {
-      image: "/pictures/feminine.png",
-      title: "Item 1",
-      description: "This is pretty cool, right?",
-    },
-    {
-      image: "/pictures/orange2.png",
-      title: "Item 2",
-      description: "This is pretty cool, right?",
-    },
-    {
-      image: "/pictures/jasmine2.png",
-      title: "Item 3",
-      description: "This is pretty cool, right?",
-    },
-    {
-      image: "/pctures/ice2.png",
-      title: "Item 4",
-      description: "This is pretty cool, right?",
-    },
-  ];
+  
   const velocity = 80; // Adjust this value to control the scroll speed
   return (
     <>
@@ -52,7 +31,7 @@ export default function Home() {
         </div>
         <div className="home-right">
           <div style={{ height: "450px", width: "450px", position: "relative", overflow: "hidden" }}>
-            <InfiniteMenu items={items} />
+            <CircularGallery bend={3} textColor="#ffffff" borderRadius={0.05} />
           </div>
         </div>
       </div>
